@@ -81,6 +81,7 @@
       <my-icon iconId="icon-jieshao" iconSize="65"></my-icon>
     </view>
 
+
     <view>
       <view class="font-md pt-2">歌手简介：</view>
       <view class="text-ellipsis w-100">{{ singerSynopsis }}</view>
