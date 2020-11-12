@@ -2014,171 +2014,185 @@ var render = function() {
           ]
         )
       ]),
-      _c(
-        "view",
-        {
-          staticClass: _vm._$s(33, "sc", "flex justify-between"),
-          attrs: { _i: 33 }
-        },
-        [
-          _c("view", [
+      _vm._$s(33, "i", !_vm.listStatus)
+        ? _c("view", [
+            _c(
+              "view",
+              {
+                staticClass: _vm._$s(34, "sc", "flex justify-between"),
+                attrs: { _i: 34 }
+              },
+              [
+                _c("view", [
+                  _c("view", [
+                    _c("text", {
+                      staticClass: _vm._$s(37, "sc", "font"),
+                      attrs: { _i: 37 }
+                    }),
+                    _c(
+                      "text",
+                      {
+                        staticClass: _vm._$s(38, "sc", "font-weight-bold"),
+                        attrs: { _i: 38 }
+                      },
+                      [_vm._v(_vm._$s(38, "t0-0", _vm._s(_vm.audioName)))]
+                    )
+                  ]),
+                  _c("view", [
+                    _c("text", {
+                      staticClass: _vm._$s(40, "sc", "font"),
+                      attrs: { _i: 40 }
+                    }),
+                    _c(
+                      "text",
+                      {
+                        staticClass: _vm._$s(41, "sc", "font-weight-bold"),
+                        attrs: { _i: 41 }
+                      },
+                      [_vm._v(_vm._$s(41, "t0-0", _vm._s(_vm.singerName)))]
+                    )
+                  ])
+                ]),
+                _c("my-icon", {
+                  attrs: { iconId: "icon-jieshao", iconSize: "65", _i: 42 }
+                })
+              ],
+              1
+            ),
             _c("view", [
-              _c("text", {
-                staticClass: _vm._$s(36, "sc", "font"),
-                attrs: { _i: 36 }
+              _c("view", {
+                staticClass: _vm._$s(44, "sc", "font-md pt-2"),
+                attrs: { _i: 44 }
               }),
               _c(
-                "text",
+                "view",
                 {
-                  staticClass: _vm._$s(37, "sc", "font-weight-bold"),
-                  attrs: { _i: 37 }
+                  staticClass: _vm._$s(45, "sc", "text-ellipsis w-100"),
+                  attrs: { _i: 45 }
                 },
-                [_vm._v(_vm._$s(37, "t0-0", _vm._s(_vm.audioName)))]
-              )
-            ]),
-            _c("view", [
-              _c("text", {
-                staticClass: _vm._$s(39, "sc", "font"),
-                attrs: { _i: 39 }
-              }),
-              _c(
-                "text",
-                {
-                  staticClass: _vm._$s(40, "sc", "font-weight-bold"),
-                  attrs: { _i: 40 }
-                },
-                [_vm._v(_vm._$s(40, "t0-0", _vm._s(_vm.singerName)))]
+                [_vm._v(_vm._$s(45, "t0-0", _vm._s(_vm.singerSynopsis)))]
               )
             ])
-          ]),
-          _c("my-icon", {
-            attrs: { iconId: "icon-jieshao", iconSize: "65", _i: 41 }
-          })
-        ],
-        1
-      ),
-      _c("view", [
-        _c("view", {
-          staticClass: _vm._$s(43, "sc", "font-md pt-2"),
-          attrs: { _i: 43 }
-        }),
-        _c(
-          "view",
-          {
-            staticClass: _vm._$s(44, "sc", "text-ellipsis w-100"),
-            attrs: { _i: 44 }
-          },
-          [_vm._v(_vm._$s(44, "t0-0", _vm._s(_vm.singerSynopsis)))]
-        )
-      ]),
-      _c(
-        "view",
-        {
-          staticClass: _vm._$s(45, "sc", "fixed-bottom shadow p-2"),
-          attrs: { _i: 45 }
-        },
-        [
-          _c("view", {
-            staticClass: _vm._$s(46, "sc", "font-weight-bold font-md"),
-            attrs: { _i: 46 }
-          }),
-          _c(
-            "scroll-view",
-            { attrs: { _i: 47 } },
+          ])
+        : _c(
+            "view",
+            {
+              staticClass: _vm._$s(
+                46,
+                "sc",
+                "fixed-bottom shadow p-2 animated fadeInUp"
+              ),
+              attrs: { _i: 46 }
+            },
             [
-              _vm._l(_vm._$s(48, "f", { forItems: _vm.audioList }), function(
-                item,
-                index,
-                $20,
-                $30
-              ) {
-                return [
-                  _c(
-                    "view",
-                    {
-                      key: _vm._$s(48, "f", {
-                        forIndex: $20,
-                        keyIndex: 0,
-                        key: item.id + "_0"
-                      }),
-                      staticClass: _vm._$s(
-                        "49-" + $30,
-                        "sc",
-                        "flex align-center font px-2"
-                      ),
-                      attrs: { _i: "49-" + $30 }
-                    },
-                    [
-                      _c(
-                        "text",
-                        {
-                          staticClass: _vm._$s(
-                            "50-" + $30,
-                            "sc",
-                            "flex-1 text-ellipsis"
-                          ),
-                          attrs: { _i: "50-" + $30 }
-                        },
-                        [
-                          _vm._v(
-                            _vm._$s("50-" + $30, "t0-0", _vm._s(item.audioName))
-                          )
-                        ]
-                      ),
-                      _c(
-                        "text",
-                        {
-                          staticClass: _vm._$s(
-                            "51-" + $30,
-                            "sc",
-                            "flex-1 text-ellipsis"
-                          ),
-                          attrs: { _i: "51-" + $30 }
-                        },
-                        [
-                          _vm._v(
-                            _vm._$s(
-                              "51-" + $30,
-                              "t0-0",
-                              _vm._s(item.singerName)
-                            )
-                          )
-                        ]
-                      ),
-                      _c(
-                        "view",
-                        {
-                          staticClass: _vm._$s(
-                            "52-" + $30,
-                            "sc",
-                            "flex-1 ml-3 flex align-center"
-                          ),
-                          attrs: { _i: "52-" + $30 }
-                        },
-                        [
-                          _c("text", {
-                            staticClass: _vm._$s("53-" + $30, "sc", "mr-2"),
-                            attrs: { _i: "53-" + $30 }
-                          }),
-                          _c("my-icon", {
-                            attrs: {
-                              iconId: "icon-bofangsanjiaoxing",
-                              iconSize: "40",
-                              _i: "54-" + $30
+              _c(
+                "scroll-view",
+                { attrs: { _i: 47 } },
+                [
+                  _vm._l(
+                    _vm._$s(48, "f", { forItems: _vm.audioList }),
+                    function(item, index, $20, $30) {
+                      return [
+                        _c(
+                          "view",
+                          {
+                            key: _vm._$s(48, "f", {
+                              forIndex: $20,
+                              keyIndex: 0,
+                              key: item.id + "_0"
+                            }),
+                            staticClass: _vm._$s(
+                              "49-" + $30,
+                              "sc",
+                              "flex align-center font px-2"
+                            ),
+                            attrs: { _i: "49-" + $30 },
+                            on: {
+                              click: function($event) {
+                                return _vm.selectPlay(item.id)
+                              }
                             }
-                          })
-                        ],
-                        1
-                      )
-                    ]
+                          },
+                          [
+                            _c(
+                              "text",
+                              {
+                                staticClass: _vm._$s(
+                                  "50-" + $30,
+                                  "sc",
+                                  "flex-1 text-ellipsis"
+                                ),
+                                attrs: { _i: "50-" + $30 }
+                              },
+                              [
+                                _vm._v(
+                                  _vm._$s(
+                                    "50-" + $30,
+                                    "t0-0",
+                                    _vm._s(item.audioName)
+                                  )
+                                )
+                              ]
+                            ),
+                            _c(
+                              "text",
+                              {
+                                staticClass: _vm._$s(
+                                  "51-" + $30,
+                                  "sc",
+                                  "flex-1 text-ellipsis"
+                                ),
+                                attrs: { _i: "51-" + $30 }
+                              },
+                              [
+                                _vm._v(
+                                  _vm._$s(
+                                    "51-" + $30,
+                                    "t0-0",
+                                    _vm._s(item.singerName)
+                                  )
+                                )
+                              ]
+                            ),
+                            _c(
+                              "view",
+                              {
+                                staticClass: _vm._$s(
+                                  "52-" + $30,
+                                  "sc",
+                                  "flex-1 ml-3 flex align-center"
+                                ),
+                                attrs: { _i: "52-" + $30 }
+                              },
+                              [
+                                _c("text", {
+                                  staticClass: _vm._$s(
+                                    "53-" + $30,
+                                    "sc",
+                                    "mr-2"
+                                  ),
+                                  attrs: { _i: "53-" + $30 }
+                                }),
+                                _c("my-icon", {
+                                  attrs: {
+                                    iconId: "icon-bofangsanjiaoxing",
+                                    iconSize: "40",
+                                    _i: "54-" + $30
+                                  }
+                                })
+                              ],
+                              1
+                            )
+                          ]
+                        )
+                      ]
+                    }
                   )
-                ]
-              })
-            ],
-            2
+                ],
+                2
+              )
+            ]
           )
-        ]
-      )
     ]
   )
 }
@@ -2208,7 +2222,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _too
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _uniPopup = _interopRequireDefault(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 27));\nvar _unit = _interopRequireDefault(__webpack_require__(/*! ../../common/unit.js */ 18));\nvar _vuex = __webpack_require__(/*! vuex */ 19);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =\n{\n  data: function data() {\n    return {\n      listStatus: false,\n      collectStatus: false,\n      nightStatus: false };\n\n  },\n  filters: {\n    formatTime: function formatTime(num) {\n      return _unit.default.formatTime(num);\n    } },\n\n  components: {\n    uniPopup: _uniPopup.default },\n\n  methods: _objectSpread(_objectSpread({},\n  (0, _vuex.mapActions)(['sliderToPlay', 'PlayOrPause', 'PreOrNext', 'selectPlay'])), {}, {\n    changeStatus: function changeStatus(statusType) {\n      __f__(\"log\", '点击了个', \" at pages/music-detail/music-detail.vue:131\");\n      this[statusType] = !this[statusType];\n    },\n    showSingerSynopsis: function showSingerSynopsis() {\n      this.$refs.popup.open();\n    } }),\n\n  computed: _objectSpread(_objectSpread({},\n  (0, _vuex.mapState)({\n    durationTime: function durationTime(_ref) {var audio = _ref.audio;return audio.durationTime;},\n    currentTime: function currentTime(_ref2) {var audio = _ref2.audio;return audio.currentTime;},\n    audioList: function audioList(_ref3) {var audio = _ref3.audio;return audio.audioList;},\n    playStatus: function playStatus(_ref4) {var\n      audio = _ref4.audio;return (\n        audio.playStatus);} })),\n\n  (0, _vuex.mapGetters)(['audioName', 'singerName', 'singerSynopsis'])) };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 26)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvbXVzaWMtZGV0YWlsL211c2ljLWRldGFpbC52dWUiXSwibmFtZXMiOlsiZGF0YSIsImxpc3RTdGF0dXMiLCJjb2xsZWN0U3RhdHVzIiwibmlnaHRTdGF0dXMiLCJmaWx0ZXJzIiwiZm9ybWF0VGltZSIsIm51bSIsInVuaXQiLCJjb21wb25lbnRzIiwidW5pUG9wdXAiLCJtZXRob2RzIiwiY2hhbmdlU3RhdHVzIiwic3RhdHVzVHlwZSIsInNob3dTaW5nZXJTeW5vcHNpcyIsIiRyZWZzIiwicG9wdXAiLCJvcGVuIiwiY29tcHV0ZWQiLCJkdXJhdGlvblRpbWUiLCJhdWRpbyIsImN1cnJlbnRUaW1lIiwiYXVkaW9MaXN0IiwicGxheVN0YXR1cyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBNEdFO0FBQ0Y7QUFDQSxnRDtBQUNlO0FBQ2JBLE1BRGEsa0JBQ047QUFDTCxXQUFPO0FBQ0xDLGdCQUFVLEVBQUUsS0FEUDtBQUVMQyxtQkFBYSxFQUFFLEtBRlY7QUFHTEMsaUJBQVcsRUFBRSxLQUhSLEVBQVA7O0FBS0QsR0FQWTtBQVFiQyxTQUFPLEVBQUU7QUFDUEMsY0FETyxzQkFDSUMsR0FESixFQUNTO0FBQ2QsYUFBT0MsY0FBS0YsVUFBTCxDQUFnQkMsR0FBaEIsQ0FBUDtBQUNELEtBSE0sRUFSSTs7QUFhYkUsWUFBVSxFQUFDO0FBQ1RDLFlBQVEsRUFBUkEsaUJBRFMsRUFiRTs7QUFnQmJDLFNBQU87QUFDRix3QkFBVyxDQUFDLGNBQUQsRUFBZ0IsYUFBaEIsRUFBOEIsV0FBOUIsRUFBMEMsWUFBMUMsQ0FBWCxDQURFO0FBRUxDLGdCQUZLLHdCQUVRQyxVQUZSLEVBRW1CO0FBQ3RCLG1CQUFZLE1BQVo7QUFDQSxXQUFLQSxVQUFMLElBQWlCLENBQUMsS0FBS0EsVUFBTCxDQUFsQjtBQUNELEtBTEk7QUFNTEMsc0JBTkssZ0NBTWU7QUFDbEIsV0FBS0MsS0FBTCxDQUFXQyxLQUFYLENBQWlCQyxJQUFqQjtBQUNELEtBUkksR0FoQk07O0FBMEJiQyxVQUFRO0FBQ0gsc0JBQVM7QUFDVkMsZ0JBQVksRUFBRSxpQ0FBR0MsS0FBSCxRQUFHQSxLQUFILFFBQWVBLEtBQUssQ0FBQ0QsWUFBckIsRUFESjtBQUVWRSxlQUFXLEVBQUUsaUNBQUdELEtBQUgsU0FBR0EsS0FBSCxRQUFlQSxLQUFLLENBQUNDLFdBQXJCLEVBRkg7QUFHVkMsYUFBUyxFQUFFLCtCQUFHRixLQUFILFNBQUdBLEtBQUgsUUFBZUEsS0FBSyxDQUFDRSxTQUFyQixFQUhEO0FBSVZDLGNBQVUsRUFBQztBQUNUSCxXQURTLFNBQ1RBLEtBRFM7QUFFUEEsYUFBSyxDQUFDRyxVQUZDLEdBSkQsRUFBVCxDQURHOztBQVNILHdCQUFXLENBQUMsV0FBRCxFQUFjLFlBQWQsRUFBNEIsZ0JBQTVCLENBQVgsQ0FURyxDQTFCSyxFIiwiZmlsZSI6IjI1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG5cbiAgaW1wb3J0IHVuaVBvcHVwIGZyb20gJ0AvY29tcG9uZW50cy91bmktcG9wdXAvdW5pLXBvcHVwLnZ1ZSdcbmltcG9ydCB1bml0IGZyb20gJy4uLy4uL2NvbW1vbi91bml0LmpzJztcbmltcG9ydCB7IG1hcFN0YXRlLCBtYXBHZXR0ZXJzLCBtYXBNdXRhdGlvbnMsIG1hcEFjdGlvbnMgfSBmcm9tICd2dWV4JztcbmV4cG9ydCBkZWZhdWx0IHtcbiAgZGF0YSgpIHtcbiAgICByZXR1cm4ge1xuICAgICAgbGlzdFN0YXR1czogZmFsc2UsIFxuICAgICAgY29sbGVjdFN0YXR1czogZmFsc2UsXG4gICAgICBuaWdodFN0YXR1czogZmFsc2VcbiAgICB9O1xuICB9LFxuICBmaWx0ZXJzOiB7XG4gICAgZm9ybWF0VGltZShudW0pIHtcbiAgICAgIHJldHVybiB1bml0LmZvcm1hdFRpbWUobnVtKTtcbiAgICB9XG4gIH0sXG4gIGNvbXBvbmVudHM6e1xuICAgIHVuaVBvcHVwXG4gIH0sXG4gIG1ldGhvZHM6IHtcbiAgICAuLi5tYXBBY3Rpb25zKFsnc2xpZGVyVG9QbGF5JywnUGxheU9yUGF1c2UnLCdQcmVPck5leHQnLCdzZWxlY3RQbGF5J10pLFxuICAgIGNoYW5nZVN0YXR1cyhzdGF0dXNUeXBlKXtcbiAgICAgIGNvbnNvbGUubG9nKCfngrnlh7vkuobkuKonKVxuICAgICAgdGhpc1tzdGF0dXNUeXBlXT0hdGhpc1tzdGF0dXNUeXBlXVxuICAgIH0sXG4gICAgc2hvd1NpbmdlclN5bm9wc2lzKCl7XG4gICAgICB0aGlzLiRyZWZzLnBvcHVwLm9wZW4oKVxuICAgIH1cbiAgfSxcbiAgY29tcHV0ZWQ6IHtcbiAgICAuLi5tYXBTdGF0ZSh7XG4gICAgICBkdXJhdGlvblRpbWU6ICh7IGF1ZGlvIH0pID0+IGF1ZGlvLmR1cmF0aW9uVGltZSxcbiAgICAgIGN1cnJlbnRUaW1lOiAoeyBhdWRpbyB9KSA9PiBhdWRpby5jdXJyZW50VGltZSxcbiAgICAgIGF1ZGlvTGlzdDogKHsgYXVkaW8gfSkgPT4gYXVkaW8uYXVkaW9MaXN0LFxuICAgICAgcGxheVN0YXR1czooe1xuICAgICAgICBhdWRpb1xuICAgICAgfSk9PmF1ZGlvLnBsYXlTdGF0dXNcbiAgICB9KSxcbiAgICAuLi5tYXBHZXR0ZXJzKFsnYXVkaW9OYW1lJywgJ3Npbmdlck5hbWUnLCAnc2luZ2VyU3lub3BzaXMnXSlcbiAgfVxufTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///25\n");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _uniPopup = _interopRequireDefault(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 27));\nvar _unit = _interopRequireDefault(__webpack_require__(/*! ../../common/unit.js */ 18));\nvar _vuex = __webpack_require__(/*! vuex */ 19);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =\n{\n  data: function data() {\n    return {\n      listStatus: false,\n      collectStatus: false,\n      nightStatus: false };\n\n  },\n  filters: {\n    formatTime: function formatTime(num) {\n      return _unit.default.formatTime(num);\n    } },\n\n  components: {\n    uniPopup: _uniPopup.default },\n\n  methods: _objectSpread(_objectSpread({},\n  (0, _vuex.mapActions)(['sliderToPlay', 'PlayOrPause', 'PreOrNext', 'selectPlay'])), {}, {\n    changeStatus: function changeStatus(statusType) {\n      this[statusType] = !this[statusType];\n    },\n    showSingerSynopsis: function showSingerSynopsis() {\n      this.$refs.popup.open();\n    } }),\n\n  computed: _objectSpread(_objectSpread({},\n  (0, _vuex.mapState)({\n    durationTime: function durationTime(_ref) {var audio = _ref.audio;return audio.durationTime;},\n    currentTime: function currentTime(_ref2) {var audio = _ref2.audio;return audio.currentTime;},\n    audioList: function audioList(_ref3) {var audio = _ref3.audio;return audio.audioList;},\n    playStatus: function playStatus(_ref4) {var\n      audio = _ref4.audio;return (\n        audio.playStatus);} })),\n\n  (0, _vuex.mapGetters)(['audioName', 'singerName', 'singerSynopsis'])) };exports.default = _default;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvbXVzaWMtZGV0YWlsL211c2ljLWRldGFpbC52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBK0dBO0FBQ0E7QUFDQSxnRDtBQUNBO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0EsdUJBREE7QUFFQSwwQkFGQTtBQUdBLHdCQUhBOztBQUtBLEdBUEE7QUFRQTtBQUNBLGNBREEsc0JBQ0EsR0FEQSxFQUNBO0FBQ0E7QUFDQSxLQUhBLEVBUkE7O0FBYUE7QUFDQSwrQkFEQSxFQWJBOztBQWdCQTtBQUNBLG1GQURBO0FBRUEsZ0JBRkEsd0JBRUEsVUFGQSxFQUVBO0FBQ0E7QUFDQSxLQUpBO0FBS0Esc0JBTEEsZ0NBS0E7QUFDQTtBQUNBLEtBUEEsR0FoQkE7O0FBeUJBO0FBQ0E7QUFDQSxpR0FEQTtBQUVBLGdHQUZBO0FBR0EsMEZBSEE7QUFJQTtBQUNBLFdBREEsU0FDQSxLQURBO0FBRUEsd0JBRkEsR0FKQSxHQURBOztBQVNBLHNFQVRBLENBekJBLEUiLCJmaWxlIjoiMjUuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XG4gIDx2aWV3IHN0eWxlPVwiaGVpZ2h0OiAxMDB2aDtcIiA6Y2xhc3M9XCJuaWdodFN0YXR1cz8nbmlnaHRUaGVtZSc6JydcIj5cbiAgICA8IS0tIOatjOabsuS/oeaBryAtLT5cbiAgICA8dmlldyBjbGFzcz1cImQtaW5saW5lLWJsb2NrIHctMTAwIHRleHQtY2VudGVyIHB5LTRcIj5cbiAgICAgIDx2aWV3PlxuICAgICAgICA8dGV4dCBjbGFzcz1cImZvbnRcIj7mrYzmm7I6PC90ZXh0PlxuICAgICAgICA8dGV4dCBjbGFzcz1cImZvbnQtd2VpZ2h0LWJvbGRcIj57eyBhdWRpb05hbWUgfX08L3RleHQ+XG4gICAgICA8L3ZpZXc+XG4gICAgICA8dmlldz5cbiAgICAgICAgPHRleHQgY2xhc3M9XCJmb250XCI+5q2M5omLOjwvdGV4dD5cbiAgICAgICAgPHRleHQgY2xhc3M9XCJmb250LXdlaWdodC1ib2xkXCI+e3sgc2luZ2VyTmFtZSB9fTwvdGV4dD5cbiAgICAgIDwvdmlldz5cbiAgICA8L3ZpZXc+XG4gICAgPCEtLSDmrYzmm7Llm77niYcgLS0+XG4gICAgPHZpZXcgY2xhc3M9XCJmbGV4IGFsaWduLWNlbnRlciBqdXN0aWZ5LWNlbnRlclwiIHN0eWxlPVwiaGVpZ2h0OjQyMHJweDtcIj5cbiAgICAgIDxpbWdcbiAgICAgICAgc3JjPVwiaHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwN1lPM2lMZ3kxZ2tieDQ4cXY0aGozMGhzMGhzdDlnLmpwZ1wiXG4gICAgICAgIGxhenktbG9hZFxuICAgICAgICBtb2RlPVwid2lkdGhGaXhcIlxuICAgICAgICBzdHlsZT1cImJvcmRlci1yYWRpdXM6IDM1cnB4O2JveC1zaGFkb3c6IDAgMnJweCA2cnB4IDA7aGVpZ2h0OjMyMHJweDsgd2lkdGg6IDgwJTtcIlxuICAgICAgICBhbHQ9XCJhbHRUZXh0XCJcbiAgICAgIC8+XG4gICAgPC92aWV3PlxuICAgIFxuICAgIDwhLS0g6L+b5bqm6YOo5YiGIC0tPlxuICAgIDx2aWV3IGNsYXNzPVwiZmxleCBhbGlnbi1jZW50ZXIganVzdGlmeS1jZW50ZXIgZm9udFwiIHN0eWxlPVwiY29sb3I6ICM3YTgzODg7aGVpZ2h0OiA2NXJweDtcIj5cbiAgICAgIDwhLS0g5oC75pe26ZW/IC0tPlxuICAgICAgPHZpZXc+e3sgZHVyYXRpb25UaW1lIHwgZm9ybWF0VGltZSB9fTwvdmlldz5cbiAgICAgIDwhLS0g6L+b5bqm5p2h6YOo5YiGIC0tPlxuICAgIDx2aWV3IHN0eWxlPVwid2lkdGg6IDUwMHJweDtcIj5cbiAgICAgIDxzbGlkZXJcbiAgICAgICAgYmxvY2stc2l6ZT1cIjE2XCJcbiAgICAgICAgYWN0aXZlQ29sb3I9XCIjZTQ4MjY3XCJcbiAgICAgICAgYmFja2dyb3VuZENvbG9yPVwiI2VlZjJmM1wiXG4gICAgICAgIDptYXg9XCJkdXJhdGlvblRpbWVcIlxuICAgICAgICA6dmFsdWU9XCJjdXJyZW50VGltZVwiXG4gICAgICAgIEBjaGFuZ2U9XCJzbGlkZXJUb1BsYXlcIlxuICAgICAgICBAY2hhbmdpbmc9XCJzbGlkZXJUb1BsYXlcIlxuICAgICAgLz48L3ZpZXc+XG4gICAgICA8dmlldz57eyBjdXJyZW50VGltZSB8IGZvcm1hdFRpbWUgfX08L3ZpZXc+XG4gICAgPC92aWV3PlxuICAgIDx2aWV3PlxuICAgICAgPHZpZXcgY2xhc3M9XCJmbGV4IGFsaWduLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBmb250IHRleHQtbGlnaHQtYmxhY2tcIiBzdHlsZT1cInBhZGRpbmctdG9wOiA2MHJweDtcIj5cbiAgICAgICAgPHZpZXcgY2xhc3M9XCJtci0zXCIgQHRhcD1cIlByZU9yTmV4dCgncHJlJylcIj5cbiAgICAgICAgICA8bXktaWNvbiBpY29uSWQ9XCJpY29uLXNoYW5neWl4aWFuZ1wiIGljb25TaXplPVwiODVcIj48L215LWljb24+XG4gICAgICAgIDwvdmlldz5cbiAgICAgICAgPHZpZXcgY2xhc3M9XCJteC01XCIgQHRhcD1cIlBsYXlPclBhdXNlXCI+XG4gICAgICAgICAgPG15LWljb24gOmljb25JZD1cIiFwbGF5U3RhdHVzPydpY29uLWJvZmFuZzEnOidpY29uLXphbnRpbmcnXCIgaWNvblNpemU9XCI4MFwiPjwvbXktaWNvbj5cbiAgICAgICAgPC92aWV3PlxuICAgICAgICA8dmlldyBjbGFzcz1cIm1sLTJcIiBAdGFwPVwiUHJlT3JOZXh0KCduZXh0JylcIj5cbiAgICAgICAgICA8bXktaWNvbiBpY29uSWQ9XCJpY29uLXhpYXlpeGlhbmdcIiBpY29uU2l6ZT1cIjg1XCI+PC9teS1pY29uPlxuICAgICAgICA8L3ZpZXc+XG4gICAgICA8L3ZpZXc+XG4gICAgICA8dmlldyBjbGFzcz1cImZsZXggYWxpZ24tY2VudGVyIGp1c3RpZnktY2VudGVyIGZvbnQgdGV4dC1saWdodC1ibGFja1wiIHN0eWxlPVwicGFkZGluZy10b3A6IDEwMHJweDtcIj5cbiAgICAgICAgPHZpZXcgY2xhc3M9XCJmbGV4IGZsZXgtY29sdW1uIGFsaWduLWNlbnRlclwiICBAdGFwPVwiY2hhbmdlU3RhdHVzKCdsaXN0U3RhdHVzJylcIj5cbiAgICAgICAgICA8bXktaWNvbiA6aWNvbklkPVwiIWxpc3RTdGF0dXM/J2ljb24taWNvbi0tJzonaWNvbi1saWViaWFvJ1wiIGljb25TaXplPVwiNjBcIj48L215LWljb24+XG4gICAgICAgICAgPHRleHQgY2xhc3M9XCJwdC0xXCI+5pKt5pS+5YiX6KGoPC90ZXh0PlxuICAgICAgICA8L3ZpZXc+XG4gICAgICAgIDx2aWV3IGNsYXNzPVwiZmxleCBmbGV4LWNvbHVtbiBhbGlnbi1jZW50ZXJcIiBzdHlsZT1cInBhZGRpbmc6IDAgODBycHg7XCIgQHRhcD1cImNoYW5nZVN0YXR1cygnY29sbGVjdFN0YXR1cycpXCI+XG4gICAgICAgICAgPG15LWljb24gOmljb25JZD1cIiFjb2xsZWN0U3RhdHVzPydpY29uLWFpeGluZmVuZ3hpYW4nOidpY29uLXhpaHVhbjInXCIgaWNvblNpemU9XCI2MFwiPjwvbXktaWNvbj5cbiAgICAgICAgICA8dGV4dCBjbGFzcz1cInB0LTFcIj7mlLbol488L3RleHQ+XG4gICAgICAgIDwvdmlldz5cbiAgICAgICAgPHZpZXcgY2xhc3M9XCJmbGV4IGZsZXgtY29sdW1uIGFsaWduLWNlbnRlclwiIEB0YXA9XCJjaGFuZ2VTdGF0dXMoJ25pZ2h0U3RhdHVzJylcIj5cbiAgICAgICAgICA8bXktaWNvbiA6aWNvbklkPVwiIW5pZ2h0U3RhdHVzPydpY29uLXllamlhbm1vc2hpJzonaWNvbi15dWVsaWFuZydcIiBpY29uU2l6ZT1cIjYwXCI+PC9teS1pY29uPlxuICAgICAgICAgIDx0ZXh0IGNsYXNzPVwicHQtMVwiPuWknOmXtOaooeW8jzwvdGV4dD5cbiAgICAgICAgPC92aWV3PlxuICAgICAgPC92aWV3PlxuICAgIDwvdmlldz5cblxyXG5cdDx2aWV3IHYtaWY9XCIhbGlzdFN0YXR1c1wiPlxuICAgIDx2aWV3IGNsYXNzPVwiZmxleCBqdXN0aWZ5LWJldHdlZW5cIj5cbiAgICAgIDx2aWV3PlxuICAgICAgICA8dmlldz5cbiAgICAgICAgICA8dGV4dCBjbGFzcz1cImZvbnRcIj7mrYzmm7I6PC90ZXh0PlxuICAgICAgICAgIDx0ZXh0IGNsYXNzPVwiZm9udC13ZWlnaHQtYm9sZFwiPnt7IGF1ZGlvTmFtZSB9fTwvdGV4dD5cbiAgICAgICAgPC92aWV3PlxuICAgICAgICA8dmlldz5cbiAgICAgICAgICA8dGV4dCBjbGFzcz1cImZvbnRcIj7mrYzmiYs6PC90ZXh0PlxuICAgICAgICAgIDx0ZXh0IGNsYXNzPVwiZm9udC13ZWlnaHQtYm9sZFwiPnt7IHNpbmdlck5hbWUgfX08L3RleHQ+XG4gICAgICAgIDwvdmlldz5cbiAgICAgIDwvdmlldz5cbiAgICAgIDxteS1pY29uIGljb25JZD1cImljb24tamllc2hhb1wiIGljb25TaXplPVwiNjVcIj48L215LWljb24+XG4gICAgPC92aWV3PlxuXHJcblxuICAgIDx2aWV3ID5cbiAgICAgIDx2aWV3IGNsYXNzPVwiZm9udC1tZCBwdC0yXCI+5q2M5omL566A5LuL77yaPC92aWV3PlxuICAgICAgPHZpZXcgY2xhc3M9XCJ0ZXh0LWVsbGlwc2lzIHctMTAwXCI+e3sgc2luZ2VyU3lub3BzaXMgfX08L3ZpZXc+XG4gICAgPC92aWV3PlxyXG5cdDwvdmlldz5cblxuICAgPCEtLSDmkq3mlL7liJfooajpg6jliIYgLS0+XHJcbiAgIFx0XHQ8dmlldyBjbGFzcz1cImZpeGVkLWJvdHRvbSBzaGFkb3cgcC0yIGFuaW1hdGVkIGZhZGVJblVwXCIgc3R5bGU9XCJoZWlnaHQ6IDMwMHJweDtib3JkZXItcmFkaXVzOiAzMHJweDtcIiB2LWVsc2U+XHJcbiAgIFx0XHRcdDxzY3JvbGwtdmlldyBzY3JvbGwteSBzdHlsZT1cImhlaWdodDogMzAwcnB4O1wiPlxyXG4gICBcdFx0XHRcdDxibG9jayB2LWZvcj1cIihpdGVtLCBpbmRleCkgaW4gYXVkaW9MaXN0XCIgOmtleT1cIml0ZW0uaWRcIj5cclxuICAgXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZmxleCBhbGlnbi1jZW50ZXIgZm9udCBweC0yXCIgc3R5bGU9XCJoZWlnaHQ6IDg1cnB4O1wiIGhvdmVyLWNsYXNzPVwiYmctbGlnaHRcIiBAdGFwPVwic2VsZWN0UGxheShpdGVtLmlkKVwiPlxyXG4gICBcdFx0XHRcdFx0XHQ8dGV4dCBjbGFzcz1cImZsZXgtMSB0ZXh0LWVsbGlwc2lzXCI+e3sgaXRlbS5hdWRpb05hbWUgfX08L3RleHQ+XHJcbiAgIFx0XHRcdFx0XHRcdDx0ZXh0IGNsYXNzPVwiZmxleC0xIHRleHQtZWxsaXBzaXNcIj57eyBpdGVtLnNpbmdlck5hbWUgfX08L3RleHQ+XHJcbiAgIFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZmxleC0xIG1sLTMgZmxleCBhbGlnbi1jZW50ZXJcIj5cclxuICAgXHRcdFx0XHRcdFx0XHQ8dGV4dCBjbGFzcz1cIm1yLTJcIj7mkq3mlL48L3RleHQ+XHJcbiAgIFx0XHRcdFx0XHRcdFx0PG15LWljb24gaWNvbklkPVwiaWNvbi1ib2ZhbmdzYW5qaWFveGluZ1wiIGljb25TaXplPVwiNDBcIj48L215LWljb24+XHJcbiAgIFx0XHRcdFx0XHRcdDwvdmlldz5cclxuICAgXHRcdFx0XHRcdDwvdmlldz5cclxuICAgXHRcdFx0XHQ8L2Jsb2NrPlxyXG4gICBcdFx0XHQ8L3Njcm9sbC12aWV3PlxyXG4gICBcdFx0PC92aWV3PlxuICA8L3ZpZXc+XHJcbiAgXG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuICBpbXBvcnQgdW5pUG9wdXAgZnJvbSAnQC9jb21wb25lbnRzL3VuaS1wb3B1cC91bmktcG9wdXAudnVlJ1xuaW1wb3J0IHVuaXQgZnJvbSAnLi4vLi4vY29tbW9uL3VuaXQuanMnO1xuaW1wb3J0IHsgbWFwU3RhdGUsIG1hcEdldHRlcnMsIG1hcE11dGF0aW9ucywgbWFwQWN0aW9ucyB9IGZyb20gJ3Z1ZXgnO1xuZXhwb3J0IGRlZmF1bHQge1xuICBkYXRhKCkge1xuICAgIHJldHVybiB7XG4gICAgICBsaXN0U3RhdHVzOiBmYWxzZSwgXG4gICAgICBjb2xsZWN0U3RhdHVzOiBmYWxzZSxcbiAgICAgIG5pZ2h0U3RhdHVzOiBmYWxzZVxuICAgIH07XG4gIH0sXG4gIGZpbHRlcnM6IHtcbiAgICBmb3JtYXRUaW1lKG51bSkge1xuICAgICAgcmV0dXJuIHVuaXQuZm9ybWF0VGltZShudW0pO1xuICAgIH1cbiAgfSxcbiAgY29tcG9uZW50czp7XG4gICAgdW5pUG9wdXBcbiAgfSxcbiAgbWV0aG9kczoge1xuICAgIC4uLm1hcEFjdGlvbnMoWydzbGlkZXJUb1BsYXknLCdQbGF5T3JQYXVzZScsJ1ByZU9yTmV4dCcsJ3NlbGVjdFBsYXknXSksXG4gICAgY2hhbmdlU3RhdHVzKHN0YXR1c1R5cGUpe1xuICAgICAgdGhpc1tzdGF0dXNUeXBlXT0hdGhpc1tzdGF0dXNUeXBlXVxuICAgIH0sXG4gICAgc2hvd1NpbmdlclN5bm9wc2lzKCl7XG4gICAgICB0aGlzLiRyZWZzLnBvcHVwLm9wZW4oKVxuICAgIH1cbiAgfSxcbiAgY29tcHV0ZWQ6IHtcbiAgICAuLi5tYXBTdGF0ZSh7XG4gICAgICBkdXJhdGlvblRpbWU6ICh7IGF1ZGlvIH0pID0+IGF1ZGlvLmR1cmF0aW9uVGltZSxcbiAgICAgIGN1cnJlbnRUaW1lOiAoeyBhdWRpbyB9KSA9PiBhdWRpby5jdXJyZW50VGltZSxcbiAgICAgIGF1ZGlvTGlzdDogKHsgYXVkaW8gfSkgPT4gYXVkaW8uYXVkaW9MaXN0LFxuICAgICAgcGxheVN0YXR1czooe1xuICAgICAgICBhdWRpb1xuICAgICAgfSk9PmF1ZGlvLnBsYXlTdGF0dXNcbiAgICB9KSxcbiAgICAuLi5tYXBHZXR0ZXJzKFsnYXVkaW9OYW1lJywgJ3Npbmdlck5hbWUnLCAnc2luZ2VyU3lub3BzaXMnXSlcbiAgfVxufTtcbjwvc2NyaXB0PlxuXG48c3R5bGU+PC9zdHlsZT4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///25\n");
 
 /***/ }),
 /* 26 */

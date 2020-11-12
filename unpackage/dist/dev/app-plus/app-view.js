@@ -1593,153 +1593,169 @@ var render = function() {
         ],
         1
       ),
-      _c(
-        "v-uni-view",
-        { staticClass: _vm._$g(33, "sc"), attrs: { _i: 33 } },
-        [
-          _c(
+      _vm._$g(33, "i")
+        ? _c(
             "v-uni-view",
-            { attrs: { _i: 34 } },
+            { attrs: { _i: 33 } },
             [
               _c(
                 "v-uni-view",
-                { attrs: { _i: 35 } },
+                { staticClass: _vm._$g(34, "sc"), attrs: { _i: 34 } },
                 [
                   _c(
-                    "v-uni-text",
-                    { staticClass: _vm._$g(36, "sc"), attrs: { _i: 36 } },
-                    [_vm._v("歌曲:")]
+                    "v-uni-view",
+                    { attrs: { _i: 35 } },
+                    [
+                      _c(
+                        "v-uni-view",
+                        { attrs: { _i: 36 } },
+                        [
+                          _c(
+                            "v-uni-text",
+                            {
+                              staticClass: _vm._$g(37, "sc"),
+                              attrs: { _i: 37 }
+                            },
+                            [_vm._v("歌曲:")]
+                          ),
+                          _c(
+                            "v-uni-text",
+                            {
+                              staticClass: _vm._$g(38, "sc"),
+                              attrs: { _i: 38 }
+                            },
+                            [_vm._v(_vm._$g(38, "t0-0"))]
+                          )
+                        ],
+                        1
+                      ),
+                      _c(
+                        "v-uni-view",
+                        { attrs: { _i: 39 } },
+                        [
+                          _c(
+                            "v-uni-text",
+                            {
+                              staticClass: _vm._$g(40, "sc"),
+                              attrs: { _i: 40 }
+                            },
+                            [_vm._v("歌手:")]
+                          ),
+                          _c(
+                            "v-uni-text",
+                            {
+                              staticClass: _vm._$g(41, "sc"),
+                              attrs: { _i: 41 }
+                            },
+                            [_vm._v(_vm._$g(41, "t0-0"))]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
                   ),
-                  _c(
-                    "v-uni-text",
-                    { staticClass: _vm._$g(37, "sc"), attrs: { _i: 37 } },
-                    [_vm._v(_vm._$g(37, "t0-0"))]
-                  )
+                  _c("my-icon", { attrs: { _i: 42 } })
                 ],
                 1
               ),
               _c(
                 "v-uni-view",
-                { attrs: { _i: 38 } },
+                { attrs: { _i: 43 } },
                 [
                   _c(
-                    "v-uni-text",
-                    { staticClass: _vm._$g(39, "sc"), attrs: { _i: 39 } },
-                    [_vm._v("歌手:")]
+                    "v-uni-view",
+                    { staticClass: _vm._$g(44, "sc"), attrs: { _i: 44 } },
+                    [_vm._v("歌手简介：")]
                   ),
                   _c(
-                    "v-uni-text",
-                    { staticClass: _vm._$g(40, "sc"), attrs: { _i: 40 } },
-                    [_vm._v(_vm._$g(40, "t0-0"))]
+                    "v-uni-view",
+                    { staticClass: _vm._$g(45, "sc"), attrs: { _i: 45 } },
+                    [_vm._v(_vm._$g(45, "t0-0"))]
                   )
                 ],
                 1
               )
             ],
             1
-          ),
-          _c("my-icon", { attrs: { _i: 41 } })
-        ],
-        1
-      ),
-      _c(
-        "v-uni-view",
-        { attrs: { _i: 42 } },
-        [
-          _c(
-            "v-uni-view",
-            { staticClass: _vm._$g(43, "sc"), attrs: { _i: 43 } },
-            [_vm._v("歌手简介：")]
-          ),
-          _c(
-            "v-uni-view",
-            { staticClass: _vm._$g(44, "sc"), attrs: { _i: 44 } },
-            [_vm._v(_vm._$g(44, "t0-0"))]
           )
-        ],
-        1
-      ),
-      _c(
-        "v-uni-view",
-        {
-          staticClass: _vm._$g(45, "sc"),
-          staticStyle: { height: "300rpx", "border-radius": "30rpx" },
-          attrs: { _i: 45 }
-        },
-        [
-          _c(
+        : _c(
             "v-uni-view",
             {
               staticClass: _vm._$g(46, "sc"),
-              staticStyle: { height: "50rpx" },
+              staticStyle: { height: "300rpx", "border-radius": "30rpx" },
               attrs: { _i: 46 }
             },
-            [_vm._v("列表选择")]
-          ),
-          _c(
-            "v-uni-scroll-view",
-            {
-              staticStyle: { height: "350rpx" },
-              attrs: { "scroll-y": true, _i: 47 }
-            },
             [
-              _vm._l(_vm._$g(48, "f"), function(item, index, $20, $30) {
-                return [
-                  _c(
-                    "v-uni-view",
-                    {
-                      key: item["k0"],
-                      staticClass: _vm._$g("49-" + $30, "sc"),
-                      staticStyle: { height: "85rpx" },
-                      attrs: { "hover-class": "bg-light", _i: "49-" + $30 }
-                    },
-                    [
-                      _c(
-                        "v-uni-text",
-                        {
-                          staticClass: _vm._$g("50-" + $30, "sc"),
-                          attrs: { _i: "50-" + $30 }
-                        },
-                        [_vm._v(_vm._$g("50-" + $30, "t0-0"))]
-                      ),
-                      _c(
-                        "v-uni-text",
-                        {
-                          staticClass: _vm._$g("51-" + $30, "sc"),
-                          attrs: { _i: "51-" + $30 }
-                        },
-                        [_vm._v(_vm._$g("51-" + $30, "t0-0"))]
-                      ),
+              _c(
+                "v-uni-scroll-view",
+                {
+                  staticStyle: { height: "300rpx" },
+                  attrs: { "scroll-y": true, _i: 47 }
+                },
+                [
+                  _vm._l(_vm._$g(48, "f"), function(item, index, $20, $30) {
+                    return [
                       _c(
                         "v-uni-view",
                         {
-                          staticClass: _vm._$g("52-" + $30, "sc"),
-                          attrs: { _i: "52-" + $30 }
+                          key: item["k0"],
+                          staticClass: _vm._$g("49-" + $30, "sc"),
+                          staticStyle: { height: "85rpx" },
+                          attrs: { "hover-class": "bg-light", _i: "49-" + $30 },
+                          on: {
+                            click: function($event) {
+                              return _vm.$handleViewEvent($event)
+                            }
+                          }
                         },
                         [
                           _c(
                             "v-uni-text",
                             {
-                              staticClass: _vm._$g("53-" + $30, "sc"),
-                              attrs: { _i: "53-" + $30 }
+                              staticClass: _vm._$g("50-" + $30, "sc"),
+                              attrs: { _i: "50-" + $30 }
                             },
-                            [_vm._v("播放")]
+                            [_vm._v(_vm._$g("50-" + $30, "t0-0"))]
                           ),
-                          _c("my-icon", { attrs: { _i: "54-" + $30 } })
+                          _c(
+                            "v-uni-text",
+                            {
+                              staticClass: _vm._$g("51-" + $30, "sc"),
+                              attrs: { _i: "51-" + $30 }
+                            },
+                            [_vm._v(_vm._$g("51-" + $30, "t0-0"))]
+                          ),
+                          _c(
+                            "v-uni-view",
+                            {
+                              staticClass: _vm._$g("52-" + $30, "sc"),
+                              attrs: { _i: "52-" + $30 }
+                            },
+                            [
+                              _c(
+                                "v-uni-text",
+                                {
+                                  staticClass: _vm._$g("53-" + $30, "sc"),
+                                  attrs: { _i: "53-" + $30 }
+                                },
+                                [_vm._v("播放")]
+                              ),
+                              _c("my-icon", { attrs: { _i: "54-" + $30 } })
+                            ],
+                            1
+                          )
                         ],
                         1
                       )
-                    ],
-                    1
-                  )
-                ]
-              })
+                    ]
+                  })
+                ],
+                2
+              )
             ],
-            2
+            1
           )
-        ],
-        1
-      )
     ],
     1
   )
