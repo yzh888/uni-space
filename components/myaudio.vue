@@ -1,7 +1,7 @@
 <template>
-	<view class="fixed-bottom rounded mx-2 mb-1" style="height: 160rpx;background-color: #d1ccc0;opacity: .9;">
+	<view class="fixed-bottom rounded mx-2 mb-1" style="height: 160rpx;background-color: #d1ccc0;opacity: .9;" @tap="toDetailPage">
 		<!-- 进度部分 -->
-		<view class="flex align-center justify-center font" style="color: #7a8338;height: 65rpx;">
+		<view class="flex align-center justify-center font" style="color: #7a8338;height: 65rpx;" @tap.stop>
 			<!-- 总时长 -->
 			<view>{{ durationTime | formatTime }}</view>
 			<!-- 进度条部分 -->
@@ -27,10 +27,14 @@
 				<view>歌曲-{{ audioName }}</view>
 			</view>
 			<!-- 音频按钮部分 -->
-			<view class="flex align-center">
-				<view class="animated" hover-class="pulse"><my-icon iconId="icon-shangyishou" iconSize="75" @my-click="PreOrNext('pre')"></my-icon></view>
+			<view class="flex align-center" @tap.stop>
+				<view class="animated" hover-class="pulse">
+					<my-icon iconId="icon-shangyishou" iconSize="75" @my-click="PreOrNext('pre')"></my-icon>
+				</view>
 				<my-icon :iconId="playStatus ? 'icon-bofang' : 'icon-ziyuan'" iconSize="75" class="mx-2" @my-click="PlayOrPause"></my-icon>
-				<view class="animated" hover-class="pulse"><my-icon iconId="icon-xiayishou" iconSize="75" @my-click="PreOrNext('next')"></my-icon></view>
+				<view class="animated" hover-class="pulse">
+					<my-icon iconId="icon-xiayishou" iconSize="75" @my-click="PreOrNext('next')"></my-icon>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -57,7 +61,12 @@ export default {
 	},
 	methods: {
 		...mapMutations(['destruction']),
-		...mapActions(['init', 'PlayOrPause', 'PlayOrNext', 'sliderToPlay','PreOrNext'])
+		...mapActions(['init', 'PlayOrPause', 'PlayOrNext', 'sliderToPlay','PreOrNext']),
+		toDetailPage() {
+			uni.navigateTo({
+				url: '/pages/music-detail/music-detail'
+			});
+		}
 	},
 	mounted() {
 		this.init();
