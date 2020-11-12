@@ -1,5 +1,6 @@
 <template>
   <view style="height: 100vh;" :class="nightStatus?'nightTheme':''">
+    <!-- 歌曲信息 -->
     <view class="d-inline-block w-100 text-center py-4">
       <view>
         <text class="font">歌曲:</text>
@@ -10,30 +11,32 @@
         <text class="font-weight-bold">{{ singerName }}</text>
       </view>
     </view>
-    <view class="flex align-center justify-center" style="width: 100%;" >
+    <!-- 歌曲图片 -->
+    <view class="flex align-center justify-center" style="height:420rpx;">
       <img
         src="http://ww1.sinaimg.cn/large/007YO3iLgy1gkbx48qv4hj30hs0hst9g.jpg"
         lazy-load
-        node="widthFix"
-        style="height:420rpx; width: 80%; border-radius: 35rpx;box-shadow: 0 2rpx 6rpx 0;"
+        mode="widthFix"
+        style="border-radius: 35rpx;box-shadow: 0 2rpx 6rpx 0;height:320rpx; width: 80%;"
         alt="altText"
       />
     </view>
-    <view class="flex align-center justify-center">
-      <view class="font" style="color: #7a8388;">
-        <view>{{ durationTime | formatTime }}</view>
-      </view>
-      <view style="width: 500rpx;">
-        <slider
-          block-size="16"
-          activeColor="#e48267"
-          backgroundColor="#eef2f3"
-          :max="durationTime"
-          :value="currentTime"
-          @change="sliderToPlay"
-          @changing="sliderToPlay"
-        />
-      </view>
+    
+    <!-- 进度部分 -->
+    <view class="flex align-center justify-center font" style="color: #7a8388;height: 65rpx;">
+      <!-- 总时长 -->
+      <view>{{ durationTime | formatTime }}</view>
+      <!-- 进度条部分 -->
+    <view style="width: 500rpx;">
+      <slider
+        block-size="16"
+        activeColor="#e48267"
+        backgroundColor="#eef2f3"
+        :max="durationTime"
+        :value="currentTime"
+        @change="sliderToPlay"
+        @changing="sliderToPlay"
+      /></view>
       <view>{{ currentTime | formatTime }}</view>
     </view>
     <view>
@@ -49,11 +52,11 @@
         </view>
       </view>
       <view class="flex align-center justify-center font text-light-black" style="padding-top: 100rpx;">
-        <view class="flex flex-column align-center">
+        <view class="flex flex-column align-center"  @tap="changeStatus('listStatus')">
           <my-icon :iconId="!listStatus?'icon-icon--':'icon-liebiao'" iconSize="60"></my-icon>
           <text class="pt-1">播放列表</text>
         </view>
-        <view class="flex flex-column align-center" style="padding: 0 80rpx;">
+        <view class="flex flex-column align-center" style="padding: 0 80rpx;" @tap="changeStatus('collectStatus')">
           <my-icon :iconId="!collectStatus?'icon-aixinfengxian':'icon-xihuan2'" iconSize="60"></my-icon>
           <text class="pt-1">收藏</text>
         </view>
@@ -83,7 +86,7 @@
       <view class="text-ellipsis w-100">{{ singerSynopsis }}</view>
     </view>
 
-    <view class="fixed-bottom shadow p-2" style="height: 400rpx;border-radius: 30rpx;">
+    <view class="fixed-bottom shadow p-2" style="height: 300rpx;border-radius: 30rpx;">
       <view class="font-weight-bold font-md" style="height: 50rpx;">列表选择</view>
       <scroll-view scroll-y style="height: 350rpx;">
         <block v-for="(item, index) in audioList" :key="item.id">
@@ -102,12 +105,13 @@
 </template>
 
 <script>
+  import uniPopup from '@/components/uni-popup/uni-popup.vue'
 import unit from '../../common/unit.js';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 export default {
   data() {
     return {
-      listStatus: false, //
+      listStatus: false, 
       collectStatus: false,
       nightStatus: false
     };
@@ -117,17 +121,27 @@ export default {
       return unit.formatTime(num);
     }
   },
+  components:{
+    uniPopup
+  },
   methods: {
-    ...mapActions(['sliderToPlay', 'PlayOrPause', 'playStatus']),
+    ...mapActions(['sliderToPlay','PlayOrPause','PreOrNext','selectPlay']),
     changeStatus(statusType){
+      console.log('点击了个')
       this[statusType]=!this[statusType]
+    },
+    showSingerSynopsis(){
+      this.$refs.popup.open()
     }
   },
   computed: {
     ...mapState({
       durationTime: ({ audio }) => audio.durationTime,
       currentTime: ({ audio }) => audio.currentTime,
-      audioList: ({ audio }) => audio.audioList
+      audioList: ({ audio }) => audio.audioList,
+      playStatus:({
+        audio
+      })=>audio.playStatus
     }),
     ...mapGetters(['audioName', 'singerName', 'singerSynopsis'])
   }
